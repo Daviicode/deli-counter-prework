@@ -5,15 +5,14 @@ def line (katz_deli)
     if katz_deli.length == 0 
     puts "The line is currently empty."
     else
-      linez = "The line is currently:"
-      katz_deli.each_with_index do |name, i|
-         linez +=  " " + (i + 1).to_s + ". " + name 
-      end 
+     katz_deli.each.with_index(1) do |name, index|
+      array.push("#{index}. #{name}")
     end
-
-    puts linez 
+    puts "The line is currently: #{array.join(" ")}"
+  end
 end
 
+   
 def take_a_number (katz_deli, name)
   
   katz_deli << name
